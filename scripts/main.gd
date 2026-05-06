@@ -7,18 +7,7 @@ var music_dir = OS.get_system_dir(OS.SYSTEM_DIR_MUSIC)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-<<<<<<< HEAD
-	print("U smell")
-
-var music_dir = OS.get_system_dir(OS.SYSTEM_DIR_MUSIC)
-
-# must find files in music_dir
-
-=======
 	dir_contents(music_dir)
-	
-	pass # Replace with function body.
->>>>>>> Dev
 
 # this should be safe to run at any time, so we aren't regenerating the scenes every boot.
 # for directories in music_dir. get they songs, cuz them directories is artists.
