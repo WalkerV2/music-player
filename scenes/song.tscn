@@ -1,9 +1,34 @@
 [gd_scene format=3 uid="uid://bhdhqyy6f4c5w"]
 
+[ext_resource type="Script" uid="uid://dsv5n4jooi83m" path="res://scripts/song.gd" id="1_vgx8i"]
+
 [node name="Song" type="Control" unique_id=42893069]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vgx8i")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1818131826]
+layout_mode = 0
+offset_right = 359.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=185134290]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1819400960]
+layout_mode = 2
+mouse_filter = 0
+text = "TEXT!!!!!"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/HBoxContainer" unique_id=857415127]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+bbcode_enabled = true
+text = "[url=open_artist_menu]ADO[/url]"
+
+[connection signal="meta_clicked" from="PanelContainer/HBoxContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
