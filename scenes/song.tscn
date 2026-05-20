@@ -20,20 +20,26 @@ offset_bottom = 40.0
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=185134290]
 layout_mode = 2
 
-[node name="SongImage" type="ColorRect" parent="PanelContainer/HBoxContainer" unique_id=797277661]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 2
-
 [node name="SongTitle" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1819400960]
 layout_mode = 2
 mouse_filter = 0
-text = "TEXT!!!!!"
+text = "ADO/Instrumental/piaproオンガクAdo ロックスター Inst"
 
 [node name="ArtistName" type="RichTextLabel" parent="PanelContainer/HBoxContainer" unique_id=857415127]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 bbcode_enabled = true
 text = "[url= open_artist_menu ]ADO[/url]"
 vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=922400778]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 180.0
+offset_right = 690.0
+offset_bottom = 220.0
+text = "ADO/Instrumental/piaproオンガクAdo ロックスター Inst"
+autowrap_mode = 0
 
 [connection signal="meta_clicked" from="PanelContainer/HBoxContainer/ArtistName" to="." method="_on_rich_text_label_meta_clicked"]

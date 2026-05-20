@@ -25,12 +25,195 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -67.0
+offset_top = -15.5
+offset_right = 67.0
+offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Generate Songs!"
 
+[node name="THEORY CRAFTING" type="Control" parent="." unique_id=1704825872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SongControls" type="ColorRect" parent="THEORY CRAFTING" unique_id=1679088541]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.10706075, 0.0067505483, 0.14718652, 1)
+
+[node name="SongInfo" type="VBoxContainer" parent="THEORY CRAFTING/SongControls" unique_id=1070056088]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="SongPath" type="Label" parent="THEORY CRAFTING/SongControls/SongInfo" unique_id=869695269]
+layout_mode = 2
+text = "ADO/Instrumental/piaproオンガクAdo ロックスター Inst"
+
+[node name="SongProgress" type="HBoxContainer" parent="THEORY CRAFTING/SongControls/SongInfo" unique_id=1983588295]
+layout_mode = 2
+
+[node name="CurrentTime" type="Label" parent="THEORY CRAFTING/SongControls/SongInfo/SongProgress" unique_id=311522090]
+layout_mode = 2
+text = "2:53"
+
+[node name="SongProgressSlider" type="HSlider" parent="THEORY CRAFTING/SongControls/SongInfo/SongProgress" unique_id=1111065595]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="MaxTime" type="Label" parent="THEORY CRAFTING/SongControls/SongInfo/SongProgress" unique_id=2069959073]
+layout_mode = 2
+text = "3:30"
+
+[node name="SongButtons" type="HBoxContainer" parent="THEORY CRAFTING/SongControls" unique_id=5124969]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shuffle" type="Button" parent="THEORY CRAFTING/SongControls/SongButtons" unique_id=1220643972]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+text = "Shuffle"
+
+[node name="PreviousSong" type="Button" parent="THEORY CRAFTING/SongControls/SongButtons" unique_id=1126935218]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+text = "Previous"
+
+[node name="PlayPause" type="Button" parent="THEORY CRAFTING/SongControls/SongButtons" unique_id=1942965242]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+text = "Play
+Pause"
+
+[node name="NextSong" type="Button" parent="THEORY CRAFTING/SongControls/SongButtons" unique_id=238987802]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+text = "Next"
+
+[node name="RepeatSong" type="Button" parent="THEORY CRAFTING/SongControls/SongButtons" unique_id=863767942]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+text = "Loop"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="THEORY CRAFTING/SongControls" unique_id=845886042]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Queue" type="Button" parent="THEORY CRAFTING/SongControls/HBoxContainer" unique_id=1883234617]
+layout_mode = 2
+text = "Queue"
+
+[node name="Button" type="Button" parent="THEORY CRAFTING/SongControls/HBoxContainer" unique_id=1838516007]
+layout_mode = 2
+text = "Mute"
+
+[node name="VolumeSlider" type="HSlider" parent="THEORY CRAFTING/SongControls/HBoxContainer" unique_id=422164839]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="THEORY CRAFTING" unique_id=1042632858]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.90700006
+offset_right = 509.0
+offset_bottom = 0.26397705
+grow_vertical = 2
+
+[node name="NavigationTab" type="ColorRect" parent="THEORY CRAFTING/HBoxContainer" unique_id=1295099941]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+color = Color(0.14881831, 0.03946919, 0.4074573, 1)
+
+[node name="TabsOrganizer" type="VBoxContainer" parent="THEORY CRAFTING/HBoxContainer/NavigationTab" unique_id=390006369]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Artists" type="Button" parent="THEORY CRAFTING/HBoxContainer/NavigationTab/TabsOrganizer" unique_id=1696003892]
+layout_mode = 2
+text = "Artists"
+
+[node name="Albums" type="Button" parent="THEORY CRAFTING/HBoxContainer/NavigationTab/TabsOrganizer" unique_id=681701187]
+layout_mode = 2
+text = "Albums"
+
+[node name="All Songs" type="Button" parent="THEORY CRAFTING/HBoxContainer/NavigationTab/TabsOrganizer" unique_id=898000509]
+layout_mode = 2
+text = "All Songs"
+
+[node name="Favorites" type="Button" parent="THEORY CRAFTING/HBoxContainer/NavigationTab/TabsOrganizer" unique_id=1136279466]
+layout_mode = 2
+text = "Favorites"
+
+[node name="Playlists" type="Button" parent="THEORY CRAFTING/HBoxContainer/NavigationTab/TabsOrganizer" unique_id=722424104]
+layout_mode = 2
+text = "Playlists"
+
+[node name="SongsDisplay" type="ColorRect" parent="THEORY CRAFTING/HBoxContainer" unique_id=196226025]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="THEORY CRAFTING/HBoxContainer/SongsDisplay" unique_id=580969021]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Search" type="LineEdit" parent="THEORY CRAFTING/HBoxContainer/SongsDisplay/VBoxContainer" unique_id=1071418519]
+layout_mode = 2
+placeholder_text = "SEARCH BOX"
+alignment = 1
+
+[node name="SongsList" type="RichTextLabel" parent="THEORY CRAFTING/HBoxContainer/SongsDisplay/VBoxContainer" unique_id=1235514876]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="SongsQueueDisplay" type="ColorRect" parent="THEORY CRAFTING" unique_id=1638476056]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.90700006
+anchor_right = 1.0
+anchor_bottom = 0.90700006
+offset_left = -218.0
+offset_top = -303.73602
+offset_bottom = 0.26397705
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.18863258, 0.15878004, 0.18333903, 1)
+
 [connection signal="pressed" from="FileDialogButton" to="." method="_on_file_dialog_button_pressed"]
+[connection signal="meta_clicked" from="THEORY CRAFTING/HBoxContainer/SongsDisplay/VBoxContainer/SongsList" to="." method="_on_songs_list_meta_clicked"]
