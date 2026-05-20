@@ -1,15 +1,13 @@
 extends Control
 
 @onready var songs_list: RichTextLabel = $"THEORY CRAFTING/HBoxContainer/SongsDisplay/VBoxContainer/SongsList"
-
 @onready var file_dialog: FileDialog = $FileDialog
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
-var audio = preload("res://scenes/audio_player.tscn").instantiate()
 var CONFIG_PATH = "user://music-player.cfg"
 var music_dir: String = OS.get_system_dir(OS.SYSTEM_DIR_MUSIC)
 var config = ConfigFile.new()
 
-# Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
 	var artist_dir = DirAccess.open("user://artists")
@@ -17,8 +15,7 @@ func _ready() -> void:
 		print("Folder found!!")
 	else:
 		DirAccess.make_dir_absolute("user://artists")
-	add_child(audio)
-	pass
+
 
 func build_library(path: String) -> void:
 	for artist_folder in DirAccess.get_directories_at(path):
@@ -61,5 +58,4 @@ func _on_file_dialog_button_pressed() -> void:
 
 
 func _on_songs_list_meta_clicked(meta: Variant) -> void:
-	print(meta.trim_prefix("play"))
-	pass # Replace with function body.
+	audio.load_song(meta.trim_prefix("play"))

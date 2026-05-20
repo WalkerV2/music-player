@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://t70ntw1lna68"]
 
 [ext_resource type="Script" uid="uid://bb4o4a8xqo6vp" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dkwyfl7g5imjs" path="res://scripts/audio_player.gd" id="2_0wfyh"]
 
 [node name="Main" type="Control" unique_id=1282307907]
 layout_mode = 3
@@ -214,6 +215,11 @@ offset_bottom = 0.26397705
 grow_horizontal = 0
 grow_vertical = 0
 color = Color(0.18863258, 0.15878004, 0.18333903, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1830115598]
+volume_db = -31.474
+autoplay = true
+script = ExtResource("2_0wfyh")
 
 [connection signal="pressed" from="FileDialogButton" to="." method="_on_file_dialog_button_pressed"]
 [connection signal="meta_clicked" from="THEORY CRAFTING/HBoxContainer/SongsDisplay/VBoxContainer/SongsList" to="." method="_on_songs_list_meta_clicked"]

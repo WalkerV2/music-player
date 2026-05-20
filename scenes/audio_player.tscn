@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://emyriw0mgcqw"]
-
-[ext_resource type="Script" uid="uid://dkwyfl7g5imjs" path="res://scripts/audio_player.gd" id="1_1qhh7"]
-
-[node name="AudioPlayer" type="AudioStreamPlayer" unique_id=573127160]
-volume_db = -30.105
-script = ExtResource("1_1qhh7")
